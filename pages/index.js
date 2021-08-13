@@ -43,13 +43,13 @@ export default function Home(props) {
                 ))}
         </div>
    {/* tabel-head element */}
-      <table className="table-auto">
+      <table className="table-auto border-separate">
         <thead>
             <tr className="">
               {/* headers to the tabel */}
-              <th>Agent</th>
-              <th>Agent Name</th>
-              <th>Borough</th>
+              <th className="px-4 py-3">Agent</th>
+              <th >Agent Name</th>
+              <th >Borough</th>
               <th>City</th>
               <th>Complaint Type</th>
               <th>Descriptor</th>
@@ -62,16 +62,17 @@ export default function Home(props) {
           {/* all the called data */}
           {
             result.map((row, index) => (
-              <tr className="bg-blue-600 border-separate border font-bold tracking-widest" key={index}>
-                <td className="">{row['agency']}</td>
-                <td className="">{row['agency_name']}</td>
-                <td className="">{row['borough']}</td>
-                <td className="">{row['city']}</td>
-                <td className="">{row['complaint_type']}</td>
-                <td className="">{row['descriptor']}</td>
-                <td className="">{row['cross_street_1']}</td>
-                <td className="">{row['cross_street_2']}</td>
-                <td className="">{row['status']}</td>
+              <tr className="bg-blue-600 border-separate border font-bold tracking-widest " key={index}>
+                {/* added padding due to data being too close together */}
+                <td className="px-4 py-3">{row['agency']}</td>
+                <td className="px-4 py-3">{row['agency_name']}</td>
+                <td className="px-4 py-3">{row['borough']}</td>
+                <td className="px-4 py-3">{row['city']}</td>
+                <td className="px-4 py-3">{row['complaint_type']}</td>
+                <td className="px-4 py-3">{row['descriptor']}</td>
+                <td className="px-4 py-3">{row['cross_street_1']}</td>
+                <td className="px-4 py-3">{row['cross_street_2']}</td>
+                <td className="px-4 py-3">{row['status']}</td>
               </tr>
             ))
           }
