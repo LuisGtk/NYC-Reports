@@ -21,4 +21,8 @@ export default {
         borough: "Manhattan",
         url: "https://data.cityofnewyork.us/resource/erm2-nwe9.json?borough=MANHATTAN"
     },
+    fetchRecent: {
+        borough: "Recent",
+        url: "https://data.cityofnewyork.us/resource/erm2-nwe9.json"
+    },
 }

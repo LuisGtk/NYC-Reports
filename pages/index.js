@@ -18,18 +18,16 @@ export const getStaticProps = async () => {
 export default function Home(props) {
   const [result, setResult] = useState([]);
   const onGetData = async (borough, url) => {  
-    console.log(borough, url);
+    // console.log(borough, url);
     const res = await fetch(url);
     const data = await res.json();
-
     console.log(data);
     setResult(data);
   }
-  // console.log(props)
   return (
     <div className=''>
       <Head>
-        <title>NYC-Reports</title>
+        <title className="">NYC-Reports</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* making the title a link to go back to home page */}
@@ -45,31 +43,38 @@ export default function Home(props) {
                 ))}
         </div>
    {/* tabel-head element */}
-      <table>
+      <table className="table-auto">
         <thead>
-            <tr>
+            <tr className="">
+              {/* headers to the tabel */}
+              <th>Agent</th>
               <th>Agent Name</th>
               <th>Borough</th>
               <th>City</th>
               <th>Complaint Type</th>
               <th>Descriptor</th>
+              <th>Cross Street 1</th>
+              <th>Cross Street 2</th>
+              <th>Status</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody >
+          {/* all the called data */}
           {
             result.map((row, index) => (
-              <tr key={index}>
-                <td>{row['agency_name']}</td>
-                <td>{row['borough']}</td>
-                <td>{row['city']}</td>
-                <td>{row['complaint_type']}</td>
-                <td>{row['descriptor']}</td>
+              <tr className="bg-blue-600 border-separate border font-bold tracking-widest" key={index}>
+                <td className="">{row['agency']}</td>
+                <td className="">{row['agency_name']}</td>
+                <td className="">{row['borough']}</td>
+                <td className="">{row['city']}</td>
+                <td className="">{row['complaint_type']}</td>
+                <td className="">{row['descriptor']}</td>
+                <td className="">{row['cross_street_1']}</td>
+                <td className="">{row['cross_street_2']}</td>
+                <td className="">{row['status']}</td>
               </tr>
             ))
           }
-        </tbody>
-        <tbody>
-
         </tbody>
       </table>
     </div>
