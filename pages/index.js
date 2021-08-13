@@ -50,10 +50,9 @@ export default function Home(props) {
             <tr>
               <th>Agent Name</th>
               <th>Borough</th>
+              <th>City</th>
               <th>Complaint Type</th>
               <th>Descriptor</th>
-              
-              <th>City</th>
             </tr>
         </thead>
         <tbody>
@@ -62,9 +61,9 @@ export default function Home(props) {
               <tr key={index}>
                 <td>{row['agency_name']}</td>
                 <td>{row['borough']}</td>
+                <td>{row['city']}</td>
                 <td>{row['complaint_type']}</td>
                 <td>{row['descriptor']}</td>
-                <td>{row['city']}</td>
               </tr>
             ))
           }
@@ -76,18 +75,3 @@ export default function Home(props) {
     </div>
   )
 }
-
-// next.js will pre-render this page after every request returned by the var
-// the context parameter contains keys such as req and res
-
-
-// export async function getServerSideProps(context) {
-//   const borough = context.query.borough;
-//   const request = await fetch(`https://data.cityofnewyork.us/resource/erm2-nwe9.json`
-//   ).then((res) => res.json());
-//   return {
-//     props: {
-//       results: requests,
-//     },
-//   };
-// }
