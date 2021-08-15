@@ -28,7 +28,7 @@ export default function Home(props) {
           {Object.entries(requests).map(([key, { borough, url }]) => (
             <h2 key={key} onClick={() => onGetData(borough, url)}
               className=" cursor-pointer bg-blue-600 hover:bg-blue-500 text-white
-                py-4 border-b-4 border-blue-800 hover:border-blue-500 rounded-full m-6 tracking-widest text-center">{borough}</h2>
+                py-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-full m-6 tracking-widest text-center">{borough}</h2>
           ))}
         </div>
         {/* tabel-head element */}
@@ -51,7 +51,7 @@ export default function Home(props) {
             {/* all the called data  LSO available to see in console*/}
             {
               result.map((row, index) => (
-                <tr className="bg-blue-600 border-separate border font-bold tracking-widest " key={index}>
+                <tr className="bg-blue-500 border-separate border font-bold tracking-widest " key={index}>
                   {/* added padding due to data being too close together */}
                   <td className="px-4 py-3">{row['agency']}</td>
                   <td className="px-4 py-3">{row['agency_name']}</td>
