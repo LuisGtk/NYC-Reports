@@ -15,7 +15,7 @@ export default function Home(props) {
     setResult(data);
   }
   return (
-    <div className="bg-gradient-to-r from-green-400 to-blue-500">
+    <div className="">
       <Head>
         <title className="">NYC-Reports</title>
         {/* Added 311 logo to add more "realism" to site */}
@@ -31,42 +31,43 @@ export default function Home(props) {
                 py-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-full m-6 tracking-widest text-center">{borough}</h2>
         ))}
       </div>
-      {/* tabel-head element */}
-      <table className="table-auto border-separate ">
-        <thead>
-          <tr>
-            {/* "headers" to the tabel */}
-            <th className="px-4 py-3">Agent</th>
-            <th >Agent Name</th>
-            <th >Borough</th>
-            <th>City</th>
-            <th>Complaint Type</th>
-            <th>Descriptor</th>
-            <th>Cross Street 1</th>
-            <th>Cross Street 2</th>
-            <th>Status</th>
+
+      {/* tabel-head element */ }
+  <table className="table-auto border-separate ">
+    <thead>
+      <tr>
+        {/* "headers" to the tabel */}
+        <th className="px-4 py-3">Agent</th>
+        <th >Agent Name</th>
+        <th >Borough</th>
+        <th>City</th>
+        <th>Complaint Type</th>
+        <th>Descriptor</th>
+        <th>Cross Street 1</th>
+        <th>Cross Street 2</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody >
+      {/* all the called data  LSO available to see in console*/}
+      {
+        result.map((row, index) => (
+          <tr className="bg-blue-500 border-separate border font-bold tracking-widest " key={index}>
+            {/* added padding due to data being too close together */}
+            <td className="px-4 py-3">{row['agency']}</td>
+            <td className="px-4 py-3">{row['agency_name']}</td>
+            <td className="px-4 py-3">{row['borough']}</td>
+            <td className="px-4 py-3">{row['city']}</td>
+            <td className="px-4 py-3">{row['complaint_type']}</td>
+            <td className="px-4 py-3">{row['descriptor']}</td>
+            <td className="px-4 py-3">{row['cross_street_1']}</td>
+            <td className="px-4 py-3">{row['cross_street_2']}</td>
+            <td className="px-4 py-3">{row['status']}</td>
           </tr>
-        </thead>
-        <tbody >
-          {/* all the called data  LSO available to see in console*/}
-          {
-            result.map((row, index) => (
-              <tr className="bg-blue-500 border-separate border font-bold tracking-widest " key={index}>
-                {/* added padding due to data being too close together */}
-                <td className="px-4 py-3">{row['agency']}</td>
-                <td className="px-4 py-3">{row['agency_name']}</td>
-                <td className="px-4 py-3">{row['borough']}</td>
-                <td className="px-4 py-3">{row['city']}</td>
-                <td className="px-4 py-3">{row['complaint_type']}</td>
-                <td className="px-4 py-3">{row['descriptor']}</td>
-                <td className="px-4 py-3">{row['cross_street_1']}</td>
-                <td className="px-4 py-3">{row['cross_street_2']}</td>
-                <td className="px-4 py-3">{row['status']}</td>
-              </tr>
-            ))
-          }
-        </tbody>
-      </table>
-    </div>
+        ))
+      }
+    </tbody>
+  </table>
+  </div>
   )
 }

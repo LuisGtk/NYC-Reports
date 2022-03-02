@@ -20,5 +20,9 @@
     "eslint-config-next": "11.1.0",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.7"
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:LuisGtk/NYC-Reports.git",
+  "author": "LuisGtk <luisgonzalez189@gmail.com>",
+  "license": "MIT"
 }

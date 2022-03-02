@@ -1,3 +1,10 @@
+This was my one of my last projects that I did through my S.E.I course and in this one I was left to myself and the knowledge I've learned up to this point. The tricky part was that I had to teach myself to learn and implement my new skill into my work. I decided to learn my way around Next.js since I grown to love using React and I found that the two were similar. Such as the App file being the main page to add all of our external links to better navigate our app. The components file for our links works about the same also. I felt like it was too simple for my liking so I learned about tailwind.css which I find very interesting on how the code works for that language and how you 
+basically write the css in your variables class name and watch your css come to life in front of your eyes. 
+
+Tech: HTML,CSS,JS,REACT,JSX
+ 
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
