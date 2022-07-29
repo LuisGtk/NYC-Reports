@@ -48,25 +48,7 @@ export default function Home(props) {
         <th>Status</th>
       </tr>
     </thead>
-    <tbody >
-      {/* all the called data  LSO available to see in console*/}
-      {
-        result.map((row, index) => (
-          <tr className="bg-blue-500 border-separate border font-bold tracking-widest " key={index}>
-            {/* added padding due to data being too close together */}
-            <td className="px-4 py-3">{row['agency']}</td>
-            <td className="px-4 py-3">{row['agency_name']}</td>
-            <td className="px-4 py-3">{row['borough']}</td>
-            <td className="px-4 py-3">{row['city']}</td>
-            <td className="px-4 py-3">{row['complaint_type']}</td>
-            <td className="px-4 py-3">{row['descriptor']}</td>
-            <td className="px-4 py-3">{row['cross_street_1']}</td>
-            <td className="px-4 py-3">{row['cross_street_2']}</td>
-            <td className="px-4 py-3">{row['status']}</td>
-          </tr>
-        ))
-      }
-    </tbody>
+
   </table>
   </div>
   )

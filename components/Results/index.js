@@ -1,5 +1,5 @@
 export default function Results(props) {
-    return(
+    return (
         <div>
             {/* {props.results} */}
         </div>
